@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>CANNON-SHOOTER</title>
+<!--         CHANGE THE ICON                                -->
+<link rel="icon" type="image/png" href="imgs/favicon.png"
+
+    </head> <!-- <div></div> -->
+    <body>
+    <!-- MAIN CONTAINER - WHERE THE ACTION OCCURS --> 
+    <div id="main-container">
+        
+            <!-- PLAYER -->
+            <div id="player">
+                <div class="hide-pixel-box"></div>
+                <div class="pixel-box cannon"></div>
+                <div class="hide-pixel-box"></div>
+                <div class="pixel-box"></div>
+                <div class="pixel-box"></div>
+                <div class="pixel-box"></div>
+            </div>
+            <!-- SHOOT MAIN CONTAINER -->
+            <div id="shoot-main-container"></div>
+
+        <!-- BOXES THAT FALLS FROM THE TOP OF THE SCREEN -->
+            <div id="cubes-main-container"></div>
+
+            <!-- START GAME -->
+            <div id="start-game">START GAME</div>
+
+            <!-- GAME OVER -->
+            <div id="game-over">GAME OVER</div>
+    </div>
+        <div id="scores-levels">   
+            <!-- CONTAINER HI-SCORE & SCORE -->
+            <div class="hi-score general">
+                <p>HI-SCORE</p>
+                <br>
+                <h4 class="hi-score-num">0</h4>
+            </div>
+            <div class="score general">
+                <p>SCORE</p>
+                <br>
+                <h4 class="score-num">0</h4>
+            </div>
+            <!-- LEVEL CONTAINERS -->
+            <div class="level general">
+                <p>LEVEL</p>
+                <br>
+                <h4 class="level-num">0</h4>
+            </div>
+        </div>
+
+    
+    
+<script src="script.js"></script>    
+    </body>
+</html>

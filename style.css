@@ -1,0 +1,242 @@
+/* GENERAL STYLES */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: courier;
+}
+
+body {
+    height:768px;
+    width:1024px;
+
+    background-color: #ffca9c;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+/* MAIN CONTAINER VIEWPORT */
+#main-container {
+    position:relative;
+    height:720px;
+    width: 540px;
+    background-color: #ffb87a;
+    box-shadow:12px 12px 10px 0px #ef9344;
+    border-radius:5px;
+    overflow: hidden;
+}
+
+/* PLAYER ONE CANNON */
+
+#player {
+    position:absolute;
+    height:40px;
+    width: 60px;
+    
+    display:none;
+    flex-wrap: wrap;
+}
+
+/* PIXEL BOX OF THE CANNON STYLE */
+
+.pixel-box { /* Builds The Cannon */
+    height:20px;
+    width: 20px;
+
+    padding:4px;
+    
+    border:.5px solid black;
+    border-radius:3px;
+    background-color: black;
+    background-clip: content-box;
+}
+
+.hide-pixel-box { /* Builds The Cannon */ 
+    height:20px;
+    width: 20px;
+/*     border:.5px solid transparent; */
+/*     background-color: transparent; */
+}
+
+/* CONTAINER FOR THE PLAYER SHOOTS FX */
+
+/* MAIN CONTAINER THE SIZE OF THE VIEWPORT */
+
+#shoot-main-container {
+    position:absolute;
+    height:720px;
+    width: 540px;
+    overflow: hidden;
+}
+
+/* CONTAINER TO STORE THE SHOOTS */
+
+.shoot-container {
+    position: absolute;
+    
+    height:40px;
+    width: 60px;
+
+/*     background-color: #f8000080; */
+}
+
+/* PIXEL SHOOT FX STYLE */
+
+.shoot-fx {
+    position:absolute;
+    top: 10px;
+    left:50%;
+    translate:-50% -50%;
+    
+    height:20px;
+    width: 20px;
+
+    padding:4px;
+    
+    border:.5px solid black;
+    border-radius:3px;
+    background-color: black;
+    background-clip: content-box;
+}
+
+/* FALLING CUBES MAIN CONTAINER THE SIZE OF THE VIEWPORT */
+
+#cubes-main-container {
+    position:absolute;
+    height:1440px;
+    width: 540px;
+}
+
+.cube-container {
+    position:absolute;
+    
+    height:40px;
+    width: 60px;
+    
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* CUBES STYLE */
+
+.cube {
+    height:20px;
+    width: 20px;
+
+    padding:4px;
+    
+    border:.5px solid black;
+    border-radius:3px;
+    background-color: black;
+    background-clip: content-box;
+}
+
+
+/* LEVELS & SCORES */
+
+#scores-levels{
+    height:720px;
+    width: 40px;    
+    display:grid;    
+}
+
+.general {
+    position:relative;
+    left: 10px;
+    height:min-content;
+    width: max-content;
+    user-select: none;
+}
+
+p {
+    font-size: x-large;
+    font-weight: bold;
+    color: #bb5d0f;
+    text-shadow:#ef9344 10px 10px 6px;
+}
+
+h4 {
+    position: relative;
+    place-items: center;
+    font-size: x-large;
+    color: #ab6123;
+    text-shadow:#ef9344 10px 10px 5px;
+}
+
+
+/* START GAME */
+
+#start-game {
+    position: relative;
+    height:720px;
+    width: 540px;
+    background:url(imgs/CannonShooterInstructionsV1.png);
+    border-radius:5px;
+
+    font-size: xxx-large;
+    font-weight: bold;
+    text-shadow:#9a4700 2px 2px 5px;
+    color: #fbbf8a;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    transition: .5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+#start-game:hover {
+    font-size: 60px;
+    color: #fdcda5;
+    text-shadow: #9a4700 -2px -2px 5px;
+}
+
+#start-game:active {
+    transition: .1s;
+    font-size: 50px;
+    text-shadow:#9a4700 2px 2px 5px;
+    color: #fbbf8a;
+}
+
+/* GAME OVER */
+
+#game-over {
+    position: relative;
+    height:720px;
+    width: 540px;
+    
+    border-radius:5px;
+ 
+    font-size: xxx-large;
+    font-weight: bold;
+    text-shadow:#9a4700 2px 2px 5px;
+    color: #ffbd82;
+
+    display: none;
+    justify-content:center; 
+    align-items: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    animation-name: game-over;
+    animation-Duration:1s;
+    animation-Fill-Mode: forwards;
+    animation-Iteration-Count:1;
+}
+
+@keyframes game-over {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 80px;
+        text-shadow:#9a4700 2px 4px 2px;
+        background-color: #fcab63db;
+    }
+}
